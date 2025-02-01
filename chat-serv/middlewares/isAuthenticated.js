@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 
-import { throwCustomError } from "../../../auth-advanced/auth-serv/utils/throwCustomError.js";
 import { User } from "../models/User.model.js";
+import { throwCustomError } from "../utils/throwCustomError.js";
 
 export async function isAuthenticated(req, resp, next) {
   const { token } = req.cookies;
