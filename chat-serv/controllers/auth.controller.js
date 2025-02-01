@@ -1,8 +1,8 @@
 import bcryptjs from "bcryptjs";
 
-import { throwCustomError } from "../../../auth-advanced/auth-serv/utils/throwCustomError.js";
 import { User } from "../models/User.model.js";
 import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
+import { throwCustomError } from "../utils/throwCustomError.js";
 
 export async function signup(req, resp, next) {
   const { fullName, email, password } = req.body;
